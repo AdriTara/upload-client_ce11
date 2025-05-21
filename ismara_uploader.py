@@ -31,7 +31,7 @@ def main():
     parser.add_argument('-o',
                         help='Organism id: human, mouse, rat, zebrafish, yeast, ecoli, arabidopsis or genome versions: hg18, hg19 or hg38 for human, mm9, mm10, mm39 for mouse, rn6 for rat, e_coli for E.coli, sacSer2 for yeast, arTal for Arabidopsis thaliana, dr11 for zebrafish.',
                         dest='organism',
-                        choices=["human", "mouse", "rat", "zebrafish", "yeast", "ecoli", "arabidopsis", 'hg18', 'mm9', 'hg19', 'mm10', "rn6", "e_coli", "arTal", "sacSer2", "dr11", "hg38", "mm39"],
+                        choices=["human", "mouse", "rat", "zebrafish", "yeast", "ecoli", "arabidopsis", 'hg18', 'mm9', 'hg19', 'mm10', "rn6", "e_coli_v2", "arTal", "sacSer2", "dr11", "hg38", "mm39"],
                         default='hg38')
 
     parser.add_argument('--mirna',
@@ -73,7 +73,7 @@ def main():
                     "rat": "rn6",
                     "zebrafish": "dr11",
                     "yeast": "sacSer2",
-                    "ecoli": "e_coli",
+                    "ecoli": "e_coli_v2",
                     "arabidopsis": "arTal"}
     if args.organism in organism_map:
         organism = organism_map[args.organism]
